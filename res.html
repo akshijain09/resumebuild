@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="style.css"/>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"/>
+    <link rel="stylesheet" type="text/css" href="resume.css" />
+
+	<title>Resume Builder</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+</head>
+
+
+<body>
+
+	<form id="" name="myForm" action="saveData.jsp" method="POST">
+        <div  class="container">
+            <h1 class="text-center my-2 bg-primary text-light ">Resume Generator</h1>
+            <br><br>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Contact Information</h3><br>
+                    <div class="form-group">
+                        <label style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;" for="nameField">Your Name</label><br>
+                        <input id="nameField" type="text" name="name" id="nameField" style="border: 1px solid black;" placeholder="Enter here" class="form-control" />
+                    </div><br>
+
+                    <div class="form-group">
+                        <label style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" for="contactField">Contact Number</label><br>
+                        <input id="contactField" type="text" name="mobileno" id="contactField" style="border: 1px solid black;" placeholder="Enter here"
+                            class="form-control" />
+                    </div><br>
+
+                    <div class="form-group">
+                        <label style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" for="addressField">Location</label><br>
+                        <input id="addField" type="text" name="location" style="border: 1px solid black;" placeholder="Enter here" class="form-control" />
+                    </div><br>
+                    
+                    <h3 style="margin-bottom: -15px;">Links</h3><br>
+                    <div class="form-group mt-2">
+                        <label style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" for="linkedField">LinkedIn</label>
+                        <input type="text" name="LinkedIn" id="linkedField" style="border: 1px solid black;" placeholder="Enter here"
+                            class="form-control" />
+                    </div>
+                    <label for=""></label>
+
+                    <div class="form-group">
+                        <label style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" >Gmail</label>
+                        <input type="text"  id="gmailField"  style="border: 1px solid black;" placeholder="Enter here" class="form-control"/>
+                    </div><br>
+                    <div class="form-group mt-2" id="we"><br>
+                        <h3>Education Qualification</h3><br>
+                        <div class="row">
+                            <div class="col-lg-3"><label style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" for="">Institution</label></div>
+                            <div class="col-lg-9"><input id="iField" type="text" name="clgname1" class="form-control" style="border: 1px solid black;"></div>
+                        </div><br>
+                        <div class="row">
+                            <div class="col-lg-3"><label style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" for="">Passing Year</label></div>
+                            <div class="col-lg-9"><input id="pField" type="number" name="year1" class="form-control" style="border: 1px solid black;"></div>
+                        </div><br>
+                        <div class="row">
+                            <div class="col-lg-3"><label style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" for="">Degree</label></div>
+                            <div class="col-lg-9"><input id="dField" type="TEXT" name="degree1" class="form-control" style="border: 1px solid black;"></div>
+                        </div>
+                        <label for="">  </label>
+                        <div><label style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" for="">Enter your Second Education Qualification</label></div>
+                        <label for="">  </label>
+                        <div class="row">
+                            <div class="col-lg-3"><label style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" for="">Institution</label></div>
+                            <div class="col-lg-9"><input id="sField" type="text" name="clgname2" class="form-control" style="border: 1px solid black;"></div>
+                        </div><br>
+                        <div class="row">
+                            <div class="col-lg-3"><label style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" for="">Passing Year</label></div>
+                            <div class="col-lg-9"><input id="paField" type="number" name="year2" class="form-control" style="border: 1px solid black;"></div>
+                        </div><br>
+                        <div class="row">
+                            <div class="col-lg-3"><label style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" for="">Degree</label></div>
+                            <div class="col-lg-9"><input id="daField" type="TEXT" name="degree2" class="form-control" style="border: 1px solid black;"></div>
+                        </div>
+                        <!-- <div class="container text-center my-2" id=weAddButton> -->
+                        <!-- <button onclick="addNewWEField()"  class="btn-btn-primary btn-sm">Add</button> -->
+                        <!-- </div> -->
+                    </div>
+
+
+
+                </div>
+                <div class="col-md-6">
+                    <h3>Professional Summary</h3><br>
+                    <div class="form-group">
+                        <label style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" for="">Objective</label>
+                        <textarea id="psField" type="text" name="about" style="border: 1px solid black;" placeholder="Enter here" class="form-control" weField>
+					</textarea>
+                    </div>
+
+                    <div class="form-group mt-2" id="we"><br>
+                        <h3>Work Experience</h3><br>
+                        <div class="row">
+                            <div class="col-lg-3"><label style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" for="">Company Name</label></div>
+                            <div class="col-lg-9"><input id="coField" type="text" name="company1" class="form-control" style="border: 1px solid black;"></div>
+                        </div><br>
+                        <div class="row">
+                            <div class="col-lg-3"><label style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" for="">Role</label></div>
+                            <div class="col-lg-9"><input id="rField" type="text" name="Designation1" class="form-control" style="border: 1px solid black;"></div>
+                        </div><br>
+                        <label style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" for="">Key Responsibilities</label>
+                        <textarea id="kField" type="text" style="border: 1px solid black;" placeholder="Enter here" name="Role1" class="form-control" weField>
+					</textarea> 
+                        <label for="">  </label>
+                        <div><label style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" for="" >Enter your Second Work Experience</label></div>
+                         <label for="">  </label>
+                        <div class="row">
+                            <div class="col-lg-3"><label style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" for="">Company Name</label></div>
+                            <div class="col-lg-9"><input id="co1Field" type="text" name="company2" class="form-control" style="border: 1px solid black;"></div>
+                        </div><br>
+                        <div class="row">
+                            <div class="col-lg-3"><label style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" for="">Role</label></div>
+                            <div class="col-lg-9"><input id="r1Field" type="text" name="Designation2" class="form-control" style="border: 1px solid black;"></div>
+                        </div><br>
+                        <label style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" for="">Key Responsibilities</label>
+                        <textarea id="k1Field" type="text"  style="border: 1px solid black;" placeholder="Enter here" name="Role2" class="form-control" weField>
+					</textarea>
+
+                        <!-- <div class="container text-center my-2" id=weAddButton> -->
+                        <!-- <button onclick="addNewWEField()" class="btn-btn-primary btn-sm">Add</button> -->
+                        <!-- </div> -->
+                    </div>
+                    <div><label for="">    </label></div>
+                    <h3>Technical Skills</h3><br>
+                    <div class="row">
+                        <div class="col-lg-3"><label style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" for="">Programming Languages</label></div>
+                        <div class="col-lg-9"><input id="skField" type="text" name="progLang" class="form-control" style="border: 1px solid black;"></div>
+                    </div><br>
+                    <div class="row">
+                        <div class="col-lg-3"><label style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" for="">Platforms</label></div>
+                        <div class="col-lg-9"><input id="plField" type="text" name="platforms" class="form-control" style="border: 1px solid black;"></div>
+                    </div><br>
+
+                </div>
+
+            </div>
+             
+        </div>
+    </form>
+
+   <!-- <div class="container text-center mt-3">
+		<button onclick="generateCV()" class="btn btn-primary btn-lg">Generate CV</button>
+	</div> -->
+    </div>
+
+    <style>
+.col{
+	margin:40px;
+}
+.br{
+        line-height: 800%;
+     }
+ hr{
+ 	height:50pt; visibility:hidden;
+ }
+</style><br>
+
+
+<h1 style="text-align:center" class="bg-primary text-light">Templates</h1>
+<br>
+<div class="container">
+	
+    <div class="row">
+        <div class="col card" onclick="generateCV()"><img src='r1.png'></div>
+       <div class="col card" ><img src='https://th.bing.com/th/id/R.7fc20a77e161f353d2be9f3462d6ede7?rik=0uBZ3FntV4sGyQ&riu=http%3a%2f%2fwww.101resumetemplates.com%2fwp-content%2fuploads%2f2015%2f12%2fsimple-resume-template.png&ehk=cWQMZCfZXuYJ0B10D45KxLP5clnHMfxA%2f2YabmZnLqE%3d&risl=&pid=ImgRaw&r=0'></div>
+        
+        <div class="col card" ><img src='https://s3-us-west-2.amazonaws.com/hiration/ghost/2018/07/simple_black.jpg'></div>
+        
+    </div>
+</div>
+
+	
+	<div id="cvtemplate"class="container">
+        <div class="left_side" style="margin-right: 40px;">
+            <div id="nameT" class="profile" style="font-size: 220%;">
+                <h2>Yash Sankhla</h2>
+                <br>
+            </div>
+                <!-- <br> -->
+                <!-- <div id="pos">
+                </div> -->
+                
+                
+            <!-- </div> -->
+            
+            <div class="contactinfo">
+                <h3 class="contact">CONTACT INFO</h3>
+                <ul>
+                    <li>
+                       <span class="icon"><i class="fa fa-phone" aria-hidden="true"></i></span>
+                       <span id="cT" class="text">+91 8302988456</span>
+                    </li>
+
+                     <li>
+                        <span class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                        <span id="locT" class="text">Rajasthan,India</span>
+                     </li>
+
+                     <li>
+                        <span class="icon"><i class="fa fa-linkedin" aria-hidden="true"></i></span>
+                        <span id="lT" class="text">www.linkedin.com/in/akshi-jain-29a305213/</span>
+                     </li>
+                    <li>
+                        <span class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                        <span id="eT"class="text" >akshijain248@gmail.com</span>
+                     </li>
+
+                     <!-- <li>
+                        <span class="icon"><i class="fa fa-linkedin" aria-hidden="true"></i></span>
+                        <span id="lT" class="text">www.linkedin.com/in/akshi-jain-29a305213/</span>
+                     </li> -->
+
+                    <!--  <li>
+                        <span class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                        <span class="text">Rajasthan,India</span>
+                     </li> -->
+                </ul>
+            </div>
+
+
+            <div class="contactinfoeducation">
+                <h3 class="education">EDUCATION</h3>
+                <ul>
+                    <li>
+                       <h4 id="uT">University Name</h4>
+                       <h5 id="pT" >2020 - 2024</h5>
+                       <h4 id="dT" >Bachelors Degree in Computer Science</h4>
+                       
+            
+                    </li>
+
+                    <li>
+                    	<h4 id="sT" >School Name</h4>
+                        <h5 id="paT" >2018 - 2020</h5>
+                        <h4 id="daT" >Senior Secondary</h4>
+                        
+             
+                     </li>
+
+                    
+                </ul>
+            </div>
+            <div class="skillset">
+                <h3 class="skill">TECHNICAL SKILLS</h3>
+                <h4 id="skT">Write skills</h4>
+                <h4 id="plT">PlattForm</h4>
+             </div>
+        </div>
+
+        
+        <div class="right_side" >
+            <div class="about">
+                <h2 class="title">ABOUT</h2>
+                <p id="oT" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus odit at quidem eligendi officia cum voluptates, dolorem autem, maxime neque saepe. Repellendus, unde eligendi sed architecto magni corrupti quam quidem.</p>
+
+                
+            </div>
+            <div class="about">
+                <h2 class="title2">WORK EXPERIENCE</h2>
+                <div class="box">
+                    <div class="year_comapany"> 
+                        <!-- <h5> 2019 - present</h5> -->
+                        <h5 id="coT">Company Name</h5>
+                    </div>
+                    <div class="text">
+                        <h4 id="rT">Senior Data Analyst</h4>
+                        <p id="kT">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus debitis laudantium oluta ullam in commodi error mollitia. Placeat non sunt atque deleniti possimus.
+                        </p>
+                    </div>
+                </div>
+<!-- <br> -->
+
+                <div class="box">
+                    <div class="year_comapany">
+                        <!-- <h5> 2019 - present</h5> -->
+                        <h5 id="co1T">Company Name</h5>
+                    </div>
+                    <div class="text">
+                        <h4 id="r1T">Senior Data Analyst</h4>
+                        <p id="k1T">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus debitis laudantium magni porro soluta ullam in commodi error mollitia. Placeat non sunt atque deleniti possimus.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="projects">
+                <h2 class="title3">PROJECTS</h2>
+                <div class="final">
+                <h3>Project 1</h3>
+                <p>role description</p>
+                <br>
+                <h3>Project 2</h3>
+                <p>Role decription</p>
+            </div>
+            </div>
+            
+        </div>
+    </div>
+          <div class="container mt-3 text-center">
+          	<button onclick="printCV()" style="text-align:center" class="bg-primary text-light" class="btn background">Print CV</button>
+
+           
+          	
+          </div>
+
+          <hr>
+
+        	
+        </div>
+	  	
+	  </div>	  
+    </div>
+	
+
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
+
+
+   <script src="resume.js"></script>
+</body>
+</html>
